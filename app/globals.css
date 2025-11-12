@@ -1,0 +1,127 @@
+@import "tailwindcss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary-color: #6B46C1; /* Purple */
+  --secondary-color: #4299E1; /* Blue */
+  --accent-color: #F6AD55; /* Yellow for highlights */
+  --success-color: #48BB78; /* Green */
+  --warning-color: #ED64A6; /* Pink */
+  --gray-color: #A0AEC0; /* Light gray */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  @apply bg-gray-100;
+}
+
+.analytics {
+  @apply bg-white w-fit text-center p-1.5 rounded-sm shadow-md scale-100 hover:scale-105 transition-transform flex flex-col;
+}
+
+header {
+  @apply flex justify-between items-center mb-8;
+}
+
+h1 {
+  @apply text-2xl font-bold;
+}
+
+button {
+  @apply bg-[var(--primary-color)] text-white px-4 py-2 rounded;
+}
+
+aside {
+  @apply w-64 bg-white h-screen p-4 shadow;
+}
+
+nav ul li a {
+  @apply block py-2 hover:bg-gray-100;
+}
+
+.stats-card {
+  @apply bg-white p-4 rounded shadow;
+}
+
+.stats-card h3 {
+  @apply text-sm text-gray-500;
+}
+
+.stats-card .value {
+  @apply text-2xl font-bold;
+}
+
+.stats-card .change {
+  @apply text-green-500 text-sm;
+}
+
+.chart-container {
+  @apply bg-white p-4 rounded shadow;
+}
+
+.chart-container h2 {
+  @apply text-lg font-semibold mb-4;
+}
+
+.job-list li, .task-list li {
+  @apply mb-4 p-2 border-b;
+}
+
+.job-list h3, .task-list h3 {
+  @apply font-semibold;
+}
+
+.job-list p, .task-list p {
+  @apply text-sm text-gray-500;
+}
+
+.application-table {
+  @apply w-full;
+}
+
+.application-table thead tr {
+  @apply text-left text-gray-500;
+}
+
+.application-table tbody tr td {
+  @apply py-2;
+}
+
+/* Custom styles for react-calendar */
+.react-calendar {
+  @apply w-full border-none shadow-md;
+}
+
+.react-calendar__tile--active {
+  @apply bg-[var(--primary-color)] text-white;
+}
+
+.react-calendar__month-view__weekdays {
+  @apply text-gray-600;
+}
+
+.react-calendar__tile {
+  @apply rounded;
+}
+
+@layer utilities {
+ 
+}
