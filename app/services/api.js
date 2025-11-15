@@ -52,7 +52,7 @@ export const PublicationAPI = {
   update: (id, data) => api.put(`/publications/${id}/`, data),
   delete: (id) => api.delete(`/publications/${id}/`),
   userPublications: (userId) => api.get(`/users/${userId}/publications/`),
-  stats: () => api.get('/publications/stats/'),
+  stats: (params) => api.get('/publications/stats/', { params }),
   editorActivities: () => api.get('/editor-activities/'),
   paginated: (page) => api.get('/publications/', { params: { page } }),
 };
